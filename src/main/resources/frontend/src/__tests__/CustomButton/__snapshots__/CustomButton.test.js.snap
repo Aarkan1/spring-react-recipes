@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  data-testid="custom-button"
+  style={
+    Object {
+      "border": "1px solid gray",
+      "margin": "10px",
+      "padding": "10px",
+    }
+  }
+>
+  click me please
+</div>
+`;

@@ -9,25 +9,25 @@ import Home from './pages/Home'
 import NewRecipe from './pages/NewRecipe'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import RecipeDetails from './pages/RecipeDetails'
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <RecipeContextProvider>
         <UserContextProvider>
-            <Router>
-              <TopNavbar />
-              <main>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/new-recipe" component={NewRecipe} />
-                <Route exact path="/perform-login" component={Login} />
-                <Route exact path="/perform-register" component={Register} />
-              </main>
-            </Router>
-          </UserContextProvider>
+          <Router>
+            <TopNavbar />
+            <main>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/new-recipe" component={NewRecipe} />
+              <Route exact path="/perform-login" component={Login} />
+              <Route exact path="/perform-register" component={Register} />
+              <Route exact path="/recipe/:id" component={RecipeDetails} />
+            </main>
+          </Router>
+        </UserContextProvider>
       </RecipeContextProvider>
     </div>
   );
 }
-
-export default App;

@@ -6,8 +6,9 @@ import { Card,
   Row, 
   Col } from 'reactstrap';
   import { RecipeContext } from '../contexts/RecipeContextProvider'
+  import { withRouter } from 'react-router-dom'
 
-export default function RecipeList() {
+function RecipeList(props) {
   const { recipes, removeRecipe } = useContext(RecipeContext)
 
   // in Vue
@@ -17,6 +18,7 @@ export default function RecipeList() {
     return recipes.map((recipe, i) => {
       return (
         <Card 
+          onClick={() => props.history.push('/recipe/' + recipe.id)}
           key={recipe.title + i}
           body 
           inverse 
@@ -53,3 +55,5 @@ export default function RecipeList() {
     </>
   )
 }
+
+export default withRouter(RecipeList)

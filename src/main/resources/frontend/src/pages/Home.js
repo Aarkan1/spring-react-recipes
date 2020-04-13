@@ -1,6 +1,8 @@
 import React from 'react'
 import RecipeList from '../components/RecipeList'
 import SearchRecipe from '../components/SearchRecipe'
+import CustomButton from '../components/CustomButton'
+import CustomClassButton from '../components/CustomClassButton'
 
 const Home = () => {
   // const [counter, setCounter] = useState(0)
@@ -29,6 +31,8 @@ const Home = () => {
 
   return (
     <div>
+      {/* <CustomButton label="funky" /> */}
+      {/* <CustomClassButton label="classy" /> */}
       {/* <h1 onClick={() => setCounter(counter + 1)} className="mb-4">Recipes</h1>
       <h1 onClick={() => setCounter2(counter2 + 1)} className="mb-4">Counter2: {counter2}</h1> */}
       <SearchRecipe />
